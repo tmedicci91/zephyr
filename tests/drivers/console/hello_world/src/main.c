@@ -8,6 +8,8 @@
 
 int main(void)
 {
+	/* Smart CI report validation: exercise the GitHub reporting bridge. */
 	printf("Hello World from Console\n");
+	printf("Smart CI report validation\n");
 	return 0;
 }
