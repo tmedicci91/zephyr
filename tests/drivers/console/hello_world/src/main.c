@@ -11,3 +11,5 @@ int main(void)
 	printf("Hello World from Console\n");
 	return 0;
 }
+
+/* smart-ci BL-AUTO-02 draft fixture */
