@@ -8,6 +8,7 @@
 
 int main(void)
 {
+	/* Comment to trigger the origin CI import. */
 	printf("Hello World from Console\n");
 	return 0;
 }
