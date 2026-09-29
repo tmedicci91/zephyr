@@ -8,6 +8,7 @@
 
 int main(void)
 {
+	/* Origin CH-01 retest: run this console case on espressif_qemu. */
 	printf("Hello World from Console\n");
 	return 0;
 }
