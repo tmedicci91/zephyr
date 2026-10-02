@@ -80,7 +80,7 @@
 		};
 
 		rng: rng@420c0800 {
-			nist-config = <0xf10f00>;
+			nist-config = <0xf11f00>;
 			health-test-config = <0x92f3>;
 			noise-source-control = <0x1609>;
 		};
@@ -159,6 +159,13 @@
 				interrupts = <122 0>;
 				status = "disabled";
 			};
+		};
+
+		dma2d: dma@5002b000 {
+			compatible = "st,stm32-dma2d";
+			reg = <0x5002b000 0xc00>;
+			interrupts = <118 0>;
+			status = "disabled";
 		};
 	};
 

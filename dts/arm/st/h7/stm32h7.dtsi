@@ -1277,9 +1277,9 @@
 			interrupt-names = "dcmi";
 			clocks = <&rcc STM32_CLOCK(AHB2, 0)>;
 			dmas = <&dma1 1 75 (STM32_DMA_PERIPH_TO_MEMORY | STM32_DMA_PERIPH_NO_INC |
-					    STM32_DMA_MEM_INC | STM32_DMA_PERIPH_8BITS |
+					    STM32_DMA_MEM_INC | STM32_DMA_PERIPH_32BITS |
 					    STM32_DMA_MEM_32BITS |
-					    STM32_DMA_PRIORITY_HIGH) STM32_DMA_FIFO_1_4>;
+					    STM32_DMA_PRIORITY_HIGH) STM32_DMA_FIFO_FULL>;
 			status = "disabled";
 		};
 
@@ -1343,6 +1343,13 @@
 			clocks = <&rcc STM32_CLOCK(APB4, 15)>;
 			resets = <&rctl STM32_RESET(APB4, 15)>;
 			ref-voltages = <2500000>, <2048000>, <1800000>, <1500000>;
+			status = "disabled";
+		};
+
+		dma2d: dma@52001000 {
+			compatible = "st,stm32-dma2d";
+			reg = <0x52001000 0x1000>;
+			interrupts = <90 0>;
 			status = "disabled";
 		};
 	};

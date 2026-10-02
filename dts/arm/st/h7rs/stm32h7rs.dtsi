@@ -238,11 +238,22 @@
 			compatible = "st,stm32h7rs-rcc";
 			#clock-cells = <2>;
 			reg = <0x58024400 0x400>;
+			st,vcoh-frequency-range = <DT_FREQ_M(384) DT_FREQ_M(1672)>;
 
 			rctl: reset-controller {
 				compatible = "st,stm32-rcc-rctl";
 				#reset-cells = <1>;
 			};
+		};
+
+		sdmmc1: sdmmc@52007000 {
+			compatible = "st,stm32-sdmmc";
+			reg = <0x52007000 0x1000>;
+			clocks = <&rcc STM32_CLOCK(AHB5, 8)>;
+			resets = <&rctl STM32_RESET(AHB5, 8)>;
+			interrupts = <108 0>;
+			interrupt-names = "event";
+			status = "disabled";
 		};
 
 		pwr: power@58024800 {
@@ -1117,6 +1128,15 @@
 			status = "disabled";
 		};
 
+		hash: crypto@48020400 {
+			compatible = "st,stm32-hash";
+			reg = <0x48020400 0x400>;
+			clocks = <&rcc STM32_CLOCK(AHB3, 1)>;
+			resets = <&rctl STM32_RESET(AHB3, 1)>;
+			interrupts = <36 0>;
+			status = "disabled";
+		};
+
 		mac: ethernet@40028000 {
 			compatible = "st,stm32h7-ethernet", "st,stm32-ethernet", "snps,dwmac";
 			reg = <0x40028000 0x8000>;
@@ -1309,6 +1329,13 @@
 			interrupts = <99 0>;
 			clocks = <&rcc STM32_CLOCK(AHB5, 3)>;
 			resets = <&rctl STM32_RESET(AHB5, 3)>;
+			status = "disabled";
+		};
+
+		dma2d: dma@52001000 {
+			compatible = "st,stm32-dma2d";
+			reg = <0x52001000 0x1000>;
+			interrupts = <98 0>;
 			status = "disabled";
 		};
 	};
