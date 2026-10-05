@@ -55,3 +55,5 @@ int main(void)
 	LOG_HEXDUMP_INF(buffer, sizeof(buffer), "FLASH DECRYPTED DATA");
 	return 0;
 }
+
+/* blob-cache reuse fixture 2026-10-05 */
