@@ -13,3 +13,5 @@ config WORD_GRANULAR_ACCESS
 	  This is particularly useful for certain types of hardware peripherals,
 	  memory-mapped I/O regions, or specialized memory types that have strict
 	  access requirements.
+
+# blob-cache reuse fixture 2026-10-05
