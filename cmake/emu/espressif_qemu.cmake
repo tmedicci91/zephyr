@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 # Espressif QEMU emu platform (SUPPORTED_EMU_PLATFORMS espressif_qemu).
+# Smart CI selector fixture: Espressif Platforms files entry.
 #
 # Boards opt in with CONFIG_ESPRESSIF_QEMU_TARGET. This file is included late by the
 # top-level CMakeLists (after the Zephyr ELF exists), so flash-image merge and
