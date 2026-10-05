@@ -4,7 +4,7 @@
 config WORD_GRANULAR_ACCESS
 	bool "Word Granular Access Memory Support"
 	help
-	  Enable support for word granular access to byte addressable memory.
+	  Enable support for word granular access to byte-addressable memory.
 
 	  When enabled, this option adds library support for safely accessing
 	  word granular access memory regions, which require that all reads and writes
