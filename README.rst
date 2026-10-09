@@ -107,3 +107,5 @@ Additional Resources
 .. _Security Advisories Repository: https://github.com/zephyrproject-rtos/zephyr/security
 .. _Tips when asking for help: https://docs.zephyrproject.org/latest/develop/getting_started/index.html#asking-for-help
 .. _Zephyr Tech Talks: https://www.zephyrproject.org/tech-talks
+
+.. Espressif CI automatic-admission fixture, 2026-10-09.
